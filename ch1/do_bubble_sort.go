@@ -2,35 +2,16 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
-)
+	"time"
 
-func BubbleSort(numbers []int) {
-	counter := 0
-	k := 0
-	flag := true
-	for ;flag; {
-		flag = false;
-		l := len(numbers)
-		for i := 0; i < l - 1 - k; i++ {
-			counter++
-			if numbers[i] > numbers[i + 1] {
-				tmp := numbers[i];
-				numbers[i] = numbers[i + 1]
-				numbers[i + 1] = tmp
-				flag = true;
-			}
-		}
-		k++
-	}
-	fmt.Printf("total : %d\n", counter)
-}
+	"./sort"
+)
 
 func main() {
 
 	var sortNum int
-	var randomNumbers[]int
+	var randomNumbers []int
 
 	fmt.Printf("ソート件数を入力して下さい。")
 	fmt.Scanf("%d", &sortNum)
@@ -49,10 +30,12 @@ func main() {
 
 	startTime := time.Now().UnixNano() / int64(time.Millisecond)
 
-	BubbleSort(randomNumbers)
+	sort.BubbleSort(randomNumbers)
+
+	fmt.Printf("%v\n", randomNumbers)
 
 	endTime := time.Now().UnixNano() / int64(time.Millisecond)
 
-	fmt.Printf("duration : %d\n", endTime - startTime)
+	fmt.Printf("duration : %d\n", endTime-startTime)
 
 }
