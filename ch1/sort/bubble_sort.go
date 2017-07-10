@@ -1,6 +1,6 @@
 package sort
 
-import "github.com/golang/go/src/fmt"
+import "fmt"
 
 func BubbleSort(numbers []int) {
 	counter := 0

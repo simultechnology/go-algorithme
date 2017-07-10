@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/golang/go/src/fmt"
-	"github.com/golang/go/src/math"
+	"fmt"
+	"math"
 )
 
 func main() {
