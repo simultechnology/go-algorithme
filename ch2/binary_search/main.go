@@ -9,10 +9,10 @@ import (
 	"time"
 )
 
-type POSTION int
+type POSITION int
 
 const (
-	FIRST POSTION = iota
+	FIRST POSITION = iota
 	LAST
 )
 
@@ -21,7 +21,7 @@ const (
 	N             = 20
 )
 
-func BinarySearch(x int, array []int, left int, right int, positon POSTION) int {
+func BinarySearch(x int, array []int, left int, right int, positon POSITION) int {
 	var mid int
 	for left < right {
 		fmt.Printf("left : %d\n", left)
@@ -81,7 +81,7 @@ func main() {
 
 	fmt.Scanf("%d", &targetNum)
 
-	var pos POSTION
+	var pos POSITION
 	rand.Seed(time.Now().UnixNano()) //種にランダムな数字を設定する
 	n := rand.Int()
 	if n%2 == 0 {

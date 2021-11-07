@@ -1,10 +1,11 @@
 package main
 
 import (
-	"./sort"
 	"fmt"
-	"github.com/simultechnology/go-algorithme/utils"
 	"time"
+
+	"github.com/simultechnology/go-algorithme/ch1/sort"
+	"github.com/simultechnology/go-algorithme/utils"
 )
 
 func main() {

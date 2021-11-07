@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"./sort"
+	"github.com/simultechnology/go-algorithme/ch1/sort"
 )
 
 func main() {
