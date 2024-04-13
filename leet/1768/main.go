@@ -8,6 +8,12 @@ func main() {
 	println(mergeAlternately("abc", "pqr"))
 	println(mergeAlternately("ab", "pqrs"))
 	println(mergeAlternately("abcd", "pq"))
+
+	println("---------------------")
+
+	println(mergeAlternately2("abc", "pqr"))
+	println(mergeAlternately2("ab", "pqrs"))
+	println(mergeAlternately2("abcd", "pq"))
 }
 
 func mergeAlternately(word1 string, word2 string) string {
@@ -28,5 +34,24 @@ func mergeAlternately(word1 string, word2 string) string {
 	if len(split2) > 0 {
 		mergedArray = append(mergedArray, split2...)
 	}
+	return strings.Join(mergedArray, "")
+}
+
+func mergeAlternately2(word1 string, word2 string) string {
+	maxLength := len(word1) + len(word2)
+	mergedArray := make([]string, 0, maxLength)
+
+	i, j := 0, 0
+	for i < len(word1) || j < len(word2) {
+		if i < len(word1) {
+			mergedArray = append(mergedArray, string(word1[i]))
+			i++
+		}
+		if j < len(word2) {
+			mergedArray = append(mergedArray, string(word2[j]))
+			j++
+		}
+	}
+
 	return strings.Join(mergedArray, "")
 }
